@@ -1,14 +1,17 @@
 import { useState } from "react";
 
-import { getMovieDetails } from "../services/movieService";
+import { getMovieDetailsService } from "../services/movieService";
 import StarOutlineIcon from "@mui/icons-material/StarOutline";
+import { useNavigate } from "react-router";
 
 const MovieCard = ({ movie }) => {
   const { imdbID, Poster, Title } = movie;
   const [movieRating, setMovieRating] = useState();
 
+  const navigate = useNavigate();
+
   async function setMovieRatings() {
-    const response = await getMovieDetails(imdbID);
+    const response = await getMovieDetailsService(imdbID);
     const {
       data: { imdbRating },
       status,
@@ -21,8 +24,15 @@ const MovieCard = ({ movie }) => {
 
   setMovieRatings();
 
+  function handleMovieNavigation() {
+    navigate(`/movie/${imdbID}`);
+  }
+
   return (
-    <div className="relative rounded-lg bg-blue-950 p-2">
+    <div
+      className="relative cursor-pointer rounded-lg bg-blue-950 p-2"
+      onClick={handleMovieNavigation}
+    >
       <img src={Poster} alt={Title} className="h-5/6 w-full rounded-lg" />
       <p className="text-white">{Title}</p>
 

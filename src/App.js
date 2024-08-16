@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router";
 import "./App.css";
 import { Header } from "./components/Header";
 import { Home } from "./pages/Home";
+import { MovieDetails } from "./pages/MovieDetails";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />}></Route>
+        <Route path="/movie/:imdbID" element={<MovieDetails />}></Route>
       </Routes>
     </div>
   );
