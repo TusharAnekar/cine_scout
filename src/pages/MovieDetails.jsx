@@ -50,7 +50,7 @@ const MovieDetails = () => {
     <div className="mt-4">
       <div className="relative">
         <img src={Poster} alt={Title} className="h-64 w-full rounded-xl" />
-        <div className="absolute -bottom-12 left-6 w-72 rounded-xl bg-blue-950 p-4">
+        <div className="absolute -bottom-12 left-6 w-72 rounded-xl bg-blue-950 p-4 opacity-75">
           <p className="text-gray-500">MaileHeroko / Movie</p>
           <p className="text-xl font-semibold text-white">{Title}</p>
         </div>
