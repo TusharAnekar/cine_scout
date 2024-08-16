@@ -58,8 +58,8 @@ const MovieDetails = () => {
         </div>
       </div>
 
-      <div className="mt-24 flex gap-6 p-4">
-        <img src={Poster} alt={Title} className="w-1/2 rounded-xl" />
+      <div className="mt-24 flex h-[30rem] gap-6 p-4">
+        <img src={Poster} alt={Title} className="h-full w-1/2 rounded-xl" />
 
         <div className="flex w-1/2 flex-col gap-4">
           <p className="text-lg font-semibold text-white">{Title}</p>
