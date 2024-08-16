@@ -16,8 +16,6 @@ const MovieDetails = () => {
   const { Genre, Plot, Poster, Released, Runtime, Title, Type, imdbRating } =
     movieDetails;
 
-  console.log(movieDetails);
-
   useEffect(() => {
     async function getMovieDetails() {
       try {
