@@ -4,6 +4,7 @@ import "./App.css";
 import { Header } from "./components/Header";
 import { Home } from "./pages/Home";
 import { MovieDetails } from "./pages/MovieDetails";
+import { PageNotFound } from "./pages/PageNotFound";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/movie/:imdbID" element={<MovieDetails />}></Route>
+        <Route path="*" element={<PageNotFound />}></Route>
       </Routes>
     </div>
   );
